@@ -13,5 +13,8 @@ public class C01_IlkTest {
         WebDriver driver = new ChromeDriver();
         //ChromeDriver turunde yeni bir obje olusturduk
         driver.get("https://techproeducation.com");  //get() method'u ile String olarak girilen url'e gideriz.
+        // github daki remote repoya ekledim
+        
+        driver.close();
     }
 }
