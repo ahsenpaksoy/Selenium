@@ -5,8 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RepeatTest6 {
     public static void main(String[] args) throws InterruptedException {
@@ -38,6 +41,8 @@ public class RepeatTest6 {
 
         //  6. Bulunan sonuc sayisini yazdirin
         WebElement sonucYazisi = driver.findElement(By.xpath("//*[@id='result-stats']"));
+        System.out.println(sonucYazisi.getText());
+        String  [] sonucSayisii = sonucYazisi.getText().split(" ");
         String sonucSayisi = sonucYazisi.getText().split(" ")[1].replace(".","");
         System.out.println("Sonuc Sayisi = " + sonucSayisi);
         int sayi = Integer.parseInt(sonucSayisi);
