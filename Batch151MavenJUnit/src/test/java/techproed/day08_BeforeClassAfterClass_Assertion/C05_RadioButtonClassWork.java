@@ -35,6 +35,9 @@ public class C05_RadioButtonClassWork {
         //https://www.facebook.com adresine gidin
         driver.get("https://www.facebook.com");
 
+        // Cookies'i kabul edin
+        driver.findElement(By.xpath("//*[@data-cookiebanner='accept_button']")).click();
+
         //“Create an Account” button’una basin
         driver.findElement(By.xpath("(//*[@role='button'])[2]")).click();
 
