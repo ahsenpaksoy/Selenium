@@ -17,11 +17,13 @@ public class C06_Assertion {
         Assert.assertEquals(3,2);
         System.out.println("Test başarılı bir şekilde çalıştı");
     }
+
     @Test
     public void test03() {
         Assert.assertNotEquals(5,4);
         System.out.println("Test başarılı bir şekilde çalıştı");
     }
+
     @Test
     public void test04() {
         String actualName = "erol";
@@ -39,7 +41,9 @@ public class C06_Assertion {
         System.out.println("Test başarılı bir şekilde çalıştı");
         System.out.println("Test başarılı bir şekilde çalıştı");
         System.out.println("Test başarılı bir şekilde çalıştı");
+
     }
+
     @Test
     public void test05() {
         int yas = 50;
