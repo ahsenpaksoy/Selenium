@@ -1,0 +1,7 @@
+
+
+    SORU1)Allert Nedir?
+        Allert uyarı veya bilgi mesajı içeren penceredir.
+    SORU2)Java script alertü nasıl handle ederiz?
+        driverı switchTo() methodu ile alert() methodunu kullanarak geçiş yapar,accept() veya dismiss() methodları
+    ile handle edebiliriz.
