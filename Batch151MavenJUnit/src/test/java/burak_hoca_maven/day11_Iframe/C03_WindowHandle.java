@@ -1,9 +1,11 @@
 package burak_hoca_maven.day11_Iframe;
 
-import burak_hoca_maven.day10_TestBase.TestBase;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
+
+import techproed.utilities.TestBase;
 
 
 public class C03_WindowHandle extends TestBase {

@@ -1,10 +1,12 @@
 package burak_hoca_maven.day11_Iframe;
 
-import burak_hoca_maven.day10_TestBase.TestBase;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import techproed.utilities.TestBase;
 
 
 public class C02_Iframe extends TestBase {
