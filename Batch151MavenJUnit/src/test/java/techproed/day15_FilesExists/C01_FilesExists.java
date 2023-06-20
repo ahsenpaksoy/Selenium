@@ -70,7 +70,7 @@ public class C01_FilesExists {
         }
         Assert.assertFalse(Files.exists(Paths.get(dosyaYolu))); // Sildigimiz icin assertFalse kullandik
 
-         
+
 
         Thread.sleep(3000);
         //Sildigimiz dosya isminde yeni bir dosya olusturalim
