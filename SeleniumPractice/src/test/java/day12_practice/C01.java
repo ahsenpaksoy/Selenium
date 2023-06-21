@@ -1,6 +1,6 @@
 package day12_practice;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import com.google.j2objc.annotations.Weak;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -20,7 +20,7 @@ public class C01 extends TestBase {
     public void test01() {
 
         driver.get("https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/");
-        wait(1);
+        bekle(1);
 
         WebElement iframe = driver.findElement(By.xpath("(//iframe)[2]"));
         driver.switchTo().frame(iframe);
@@ -32,12 +32,12 @@ public class C01 extends TestBase {
         System.out.println(emoji);
 
         driver.switchTo().defaultContent();
-        wait(1);
+        bekle(1);
 
         driver.findElement(By.xpath("//*[@id='text']")).sendKeys("Merhaba", Keys.TAB, "omer", Keys.TAB, "faruk"
                 , Keys.TAB, "Tufan", Keys.TAB, "Makarna");
 
-        wait(1);
+        bekle(1);
         driver.findElement(By.xpath("//*[@id='send']")).click();
 
     }

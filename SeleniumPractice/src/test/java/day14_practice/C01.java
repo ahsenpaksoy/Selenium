@@ -1,6 +1,6 @@
 package day14_practice;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
@@ -14,7 +14,7 @@ public class C01 extends TestBase {
 
         // - http://szimek.github.io/signature_pad/ sayfasına gidiniz
         driver.get("http://szimek.github.io/signature_pad/");
-        wait(1);
+        bekle(1);
 
         // - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
         WebElement sayfa = driver.findElement(By.xpath("//div[@class='signature-pad--body']"));
@@ -32,7 +32,7 @@ public class C01 extends TestBase {
                 .release()
                 .perform();
 
-        wait(2);
+        bekle(2);
         // - Çizimden sonra clear butonuna basınız
         driver.findElement(By.xpath("//*[@class='button clear']")).click();
 

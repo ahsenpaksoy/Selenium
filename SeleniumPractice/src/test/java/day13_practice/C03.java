@@ -1,6 +1,6 @@
 package day13_practice;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -36,7 +36,7 @@ public class C03 extends TestBase {
     public void test01() {
         // 1- amazon gidin
         driver.get("https://www.amazon.com");
-        wait(2);
+        bekle(2);
 
         // 2. Arama kutusunun solundaki dropdown menuyu handle edip listesini ekrana yazdırın
         WebElement ddm = driver.findElement(By.xpath("//*[@class='nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown']"));
@@ -55,20 +55,20 @@ public class C03 extends TestBase {
     @Test
     public void test02() {
         driver.get("https://www.amazon.com");
-        wait(2);
+        bekle(2);
 
         WebElement ddm = driver.findElement(By.xpath("//*[@class='nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown']"));
         Select options = new Select(ddm);
 
         //1. dropdown menuden elektronik bölümü seçin
         options.selectByVisibleText("Electronics");
-        wait(2);
+        bekle(2);
 
         //2. arama kutusuna iphone yazip aratin ve bulunan sonuç sayısını yazdırın
         WebElement searchBox = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
         searchBox.sendKeys("Java");
         searchBox.submit();
-        wait(1);
+        bekle(1);
 
         WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
         System.out.println(sonucYazisi.getText());
@@ -79,11 +79,11 @@ public class C03 extends TestBase {
         Assert.assertFalse(sonucYazisi.getText().contains("iphone"));
 
         //4. ikinci ürüne relative locater kullanarak tıklayin
-        wait(1);
+        bekle(1);
         driver.findElement(By.xpath("(//*[@class='a-size-base-plus a-color-base a-text-normal'])[2]")).click();
 
         //5. ürünün title'ni ve fiyatını variable’a assign edip ürünü sepete ekleyelim
-        wait(1);
+        bekle(1);
         System.out.println("secilen urun basligi : " + driver.getTitle());
         System.out.println(driver.findElement(By.xpath("//*[@class='a-price aok-align-center reinventPricePriceToPayMargin priceToPay']")).getText());
 
@@ -94,7 +94,7 @@ public class C03 extends TestBase {
     @Test
     public void test03() {
         driver.get("https://www.amazon.com");
-        wait(2);
+        bekle(2);
 
         //1. yeni bir sekme açarak amazon anasayfaya gidin
         driver.getWindowHandle(); //bulunan safyfanin handle degerini alip gecis islemi yapmaliyiz
@@ -106,7 +106,7 @@ public class C03 extends TestBase {
         WebElement ddm = driver.findElement(By.xpath("//*[@class='nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown']"));
         Select options = new Select(ddm);
         options.selectByVisibleText("Baby");
-        wait(2);
+        bekle(2);
 
 
         //3. bebek puset aratıp bulundan sonuç sayısını yazdırın
@@ -114,7 +114,7 @@ public class C03 extends TestBase {
         WebElement searchBox = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
         searchBox.sendKeys("bebek puset");
         searchBox.submit();
-        wait(1);
+        bekle(1);
 
         WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
         System.out.println(sonucYazisi.getText());
