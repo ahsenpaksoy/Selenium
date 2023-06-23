@@ -21,6 +21,7 @@ public class C04_StaleElementReferenceException extends TestBase {
         driver.get("https://techproeducation.com");
         bekle(2);
         driver.findElement(By.xpath("//*[@class='eicon-close']")).click();
+
         //arama kutusunda qa aratalım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@type='search']"));
         driver.navigate().refresh();
@@ -43,10 +44,12 @@ public class C04_StaleElementReferenceException extends TestBase {
         driver.get("https://techproeducation.com");
         bekle(2);
         driver.findElement(By.xpath("//*[@class='eicon-close']")).click();
+
         //arama kutusunda qa aratalım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@type='search']"));
         driver.navigate().refresh();
         driver.findElement(By.xpath("//*[@type='search']")).sendKeys("qa", Keys.ENTER);
+
         //sayfa başlığının qa içerdiğini test edelim
         Assert.assertTrue(driver.getTitle().contains("qa"));
     }
@@ -56,6 +59,7 @@ public class C04_StaleElementReferenceException extends TestBase {
         driver.get("https://techproeducation.com");
         bekle(2);
         driver.findElement(By.xpath("//*[@class='eicon-close']")).click();
+
         //arama kutusunda qa aratalım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@type='search']"));
         aramaKutusu.sendKeys("developer",Keys.ENTER);
@@ -65,6 +69,7 @@ public class C04_StaleElementReferenceException extends TestBase {
         org.openqa.selenium.StaleElementReferenceException: back-forward sonrasında da bu hatayı aldık
          */
         aramaKutusu.sendKeys("qa", Keys.ENTER);
+
         //sayfa başlığının qa içerdiğini test edelim
         Assert.assertTrue(driver.getTitle().contains("qa"));
     }
@@ -72,9 +77,11 @@ public class C04_StaleElementReferenceException extends TestBase {
     public void test04() {
         //amazon sayfasına gidelim
         driver.get("https://amazon.com");
+
         //arama kutusunda iphone aratalım
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("iphone",Keys.ENTER);
+
         //çıkan sonuclardan ilk beşine tıklayıp,her ürünün başlığını konsola yazdıralım
         List<WebElement> urunler = driver.findElements(By.xpath("//h2//a"));
         for (int i = 0; i < urunler.size(); i++) {

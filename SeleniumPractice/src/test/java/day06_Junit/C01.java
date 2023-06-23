@@ -45,7 +45,7 @@ public class C01 {
 
         // Checkbox2'yi bulma ve seçilip seçili olmadığını kontrol etme
         WebElement checkbox2 = driver.findElement(By.xpath("(//*[@type='checkbox'])[2]"));
-        if (checkbox2.isSelected()) {
+        if (!checkbox2.isSelected()) {
             checkbox2.click(); // Checkbox2 seçili değilse tıklayın
         }
         Thread.sleep(2000);

@@ -29,7 +29,7 @@ public class AmazonSearchTest1 extends TestBase {
         System.out.println("Sonuc sayisi : " + sonucSayisi[2]);
 
         // Ilk urunu tiklayalim
-        driver.findElement(By.xpath("(//*[@class='a-size-medium a-color-base a-text-normal'])[1]")).click();
+        //driver.findElement(By.xpath("(//*[@class='a-size-medium a-color-base a-text-normal'])[1]")).click();
 
         // Sayfadaki tum basliklari yazdiralim
         List<WebElement> basliklar = driver.findElements(By.xpath("//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal']"));
