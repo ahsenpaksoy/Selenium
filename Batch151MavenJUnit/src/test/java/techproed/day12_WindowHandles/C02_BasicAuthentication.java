@@ -17,8 +17,10 @@ public class C02_BasicAuthentication extends TestBase {
         //    Username: admin
         //    Password: admin
         //    Başarılı girişi doğrulayın.
+
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
         bekle(3);
+
         //Başarılı bir girişten sonra Congratulations! yazısının çıktığını doğrulayın
         WebElement text = driver.findElement(By.xpath("//p"));
         Assert.assertTrue(text.getText().contains("Congratulations!"));
