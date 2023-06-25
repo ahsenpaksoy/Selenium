@@ -1,5 +1,6 @@
 package practiceMix;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -51,9 +52,15 @@ public class HandleDropdown extends TestBase {
 
         // “US Dollars” in secilmedigini test edin
         WebElement dollarButton = driver.findElement(By.xpath("(//*[@type='radio'])[1]"));
+        Assert.assertFalse(dollarButton.isSelected());
 
         // “Selected currency” butonunu secin
+        driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
+
         // “Calculate Costs” butonuna basin sonra “purchase” butonuna basin
+        driver.findElement(By.xpath("//*[@id='pc_calculate_costs']")).click();
+        driver.findElement(By.xpath("(//input[@type='submit'])[2]")).click();
+
         // “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
 
 

@@ -36,7 +36,7 @@ public class C02_Dropdownn {
 
     @After
     public void tearDown() throws Exception {
-        // driver.close();
+         driver.close();
     }
 
     @Test
