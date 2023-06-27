@@ -12,6 +12,7 @@ public class C03_KeyDownKeyUp extends TestBase {
     public void test01() {
         //Google anasayfasına gidelim
         driver.get("https://google.com");
+        bekle(2);
 
         //arama kutusunda shift tusuna basılı olarak selenim yazdıralım ve shift tuşunu serbest bırakarak java yazdıralım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@class='gLFyf']"));
@@ -34,8 +35,8 @@ public class C03_KeyDownKeyUp extends TestBase {
         aramaKutusu.sendKeys(Keys.SHIFT,"selenium",Keys.SHIFT,"-java",Keys.ENTER);
         /*
             Mause işlemleri için actions class'ını kullanmamız gerekir. Fakat bir metin kutusundaki klavye işlemleri için
-    actions class'ına kullanmadan sendKeys() methodu ile de istediğimiz bir metni büyük yazdırabilir,
-    hatta bir den fazla klavye tuşlana bastırabiliriz. Yukardaki örnekte sendKeys() methodu ile Keys.SHIFT diyerek
+    actions class'ıni kullanmadan sendKeys() methodu ile de istediğimiz bir metni büyük yazdırabilir,
+    hatta bir den fazla klavye tuşlarina bastırabiliriz. Yukardaki örnekte sendKeys() methodu ile Keys.SHIFT diyerek
     sonrasında yazdırmak istediğimiz metni küçük harfle yazmamıza rağmen büyük harflerle yazdırdı, tekrar Keys.SHIFT
     kullanarak shift tuşunu serbest bırakmış olduk.
 

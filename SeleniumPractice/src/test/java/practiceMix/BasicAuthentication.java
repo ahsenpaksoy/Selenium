@@ -11,7 +11,7 @@ public class BasicAuthentication extends TestBase {
     public void test01() {
 
         // https://the-internet.herokuapp.com/basic_auth sayfasina gidin
-        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+        driver.get("https://the-internet.herokuapp.com/basic_auth");
         bekle(2);
 
         // asagidaki yontem ve test datalarini kullanarak authentication’i yapin
