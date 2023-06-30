@@ -20,6 +20,7 @@ public class C02_ExplicitWait extends TestBase {
         WebElement helloWorldText = driver.findElement(By.xpath("(//h4)[2]"));
         visibleWait(helloWorldText,20);
         Assert.assertEquals("Hello World!",helloWorldText.getText());
+
     }
 
     @Test

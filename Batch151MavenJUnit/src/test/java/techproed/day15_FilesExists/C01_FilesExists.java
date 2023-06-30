@@ -14,14 +14,14 @@ public class C01_FilesExists {
 
         /*
          Bir web sitesini test ettiğimizde download işlemi yapıldığı zaman dosyanın bilgisayarımıza inip inmediğini
-    kontrol etmek varlığını doğrulamak için yada bilgisayarımızdaki herhangi bir dosyanın varlığını doğrulabilmek
+    kontrol etmek varlığını doğrulamak için yada bilgisayarımızdaki herhangi bir dosyanın varlığını doğrulayabilmek
     için;
         Files class'ından exists() methodunu kullanarak parametre olarak Paths.get(dosyaYolu) methodunu kullanarak
     dosyanın varlığını test edebiliriz. --> Files.exists(Paths.get(dosyaYolu)
     Dolayısıyla bu işleme başlamadan önce varlığını test edeceğimiz dosyanın yolunu String bir değişkene
     assing ederiz.
          */
-        String dosyaYolu = "C:/Users/Sinem/Desktop/String kadi = null;.txt";
+        String dosyaYolu = "C:/Users/Sinem/Desktop/a.txt";
         System.out.println(Files.exists(Paths.get(dosyaYolu))); // Dosya varsa "True" yoksa "False" doner
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
     }
@@ -40,7 +40,7 @@ public class C01_FilesExists {
     @Test
     public void test03() throws InterruptedException {
         /*
-        Bir server'da farkli işlerim sistemleri ile aynı anda dosya varlığını test etmek istediğimiz zaman,
+        Bir server'da farkli işletim sistemleri ile aynı anda dosya varlığını test etmek istediğimiz zaman,
     daha dinamik olması açısından System.getProperty("os.name") bu şekilde işletim sistemi alır
     her işletim sistemin kullanıcı yolu farklı olacağından System.getProperty("user.home")
     bilgisayarımızdaki kullanıcı yolunu bu şekilde String bir değişkene farklıYol ismiyle System.getProperty("user.home")
@@ -48,7 +48,7 @@ public class C01_FilesExists {
     sisteminde bize aynı yolu vereceği için bunuda ortakYol olarak bir String'e assing ederiz
 
          */
-        // Dosya yolumuz -> "C:/Users/Sinem/Desktop/String kadi = null;.txt";
+        // Dosya yolumuz -> "C:/Users/Sinem/Desktop/a.txt";
         String farkliYol = "";
         String isletimSistemiAdi = System.getProperty("os.name"); // isletim sisteminin adini verir
         System.out.println(isletimSistemiAdi);
@@ -58,8 +58,9 @@ public class C01_FilesExists {
         }else if(isletimSistemiAdi.contains("mac")){
             farkliYol = "/Users/aycapolatkamali"; // Mac isletim sistemi yolu
         }
-        String ortakYol = "/Desktop/String kadi = null;.txt";
+        String ortakYol = "/Desktop/a.txt";
         String dosyaYolu = farkliYol+ortakYol;
+        System.out.println(Paths.get(dosyaYolu));
         System.out.println(Files.exists(Paths.get(dosyaYolu)));
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 
@@ -94,7 +95,7 @@ public class C01_FilesExists {
         Aynı işlemi aşağıdaki örnekteki gibi File class'ından obje oluşturarak da yapabiliriz.
          */
 
-        String dosyaYolu = "C:/Users/Sinem/Desktop/String kadi = null;.txt";
+        String dosyaYolu = "C:/Users/Sinem/Desktop/a.txt";
         File file = new File(dosyaYolu);
         System.out.println(file.exists());
         Assert.assertTrue(file.exists());

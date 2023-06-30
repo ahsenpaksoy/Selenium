@@ -12,12 +12,13 @@ public class C03_FileUploadTes extends TestBase {
 
         //https://the-internet.herokuapp.com/upload adresine gidelim
         driver.get("https://the-internet.herokuapp.com/upload");
+        bekle(2);
 
         /*
             Eğer dosyaSeç butonuna basmamız istenirse ve otomasyon ile bu butona klik yapmak istediğimizde
         exception alıyorsak, direk upload yapmak istediğimiz dosya yolunu alıp sendKeys() methodu ile
         dosyayı sayfaya upload yapabiliriz.
-        Eğer upload yada dosyaseç butonuna tıkladığınızda windows pencesi açılıyorsa, o webelemente
+        Eğer upload yada dosyaseç butonuna tıkladığınızda windows penceresi açılıyorsa, o webelemente
         sendKeys() methodu ile dosya gönderemeyebilirsiniz. Böyle bir durumla karşılaşırsanız
         Robot class'ından obje ile methodlar kullanarak bunu aşabilirsiniz.
          */
@@ -29,6 +30,7 @@ public class C03_FileUploadTes extends TestBase {
 
         //Yuklemek istediginiz dosyayi secelim.
         dosyaSec.sendKeys(dosyaYolu);
+        bekle(2);
 
         //Upload butonuna basalim.
         driver.findElement(By.id("file-submit")).click();

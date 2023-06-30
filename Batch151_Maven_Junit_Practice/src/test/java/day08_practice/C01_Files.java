@@ -9,16 +9,10 @@ import java.nio.file.Paths;
 
 public class C01_Files {
 
-
-    // masaustunde bir text dosyası olusturunuz
-    // masaustunde text dosyasının olup olmadıgını test ediniz
-
-
     @Test
     public void test01() {
 
         // masaustunde bir text dosyası olusturunuz
-
         // masaustunde text dosyasının olup olmadıgını test ediniz
 
         //    "C:\Users\Sinem\Desktop\Batch151.txt"

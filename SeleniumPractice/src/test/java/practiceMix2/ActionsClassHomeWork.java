@@ -1,5 +1,6 @@
 package practiceMix2;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -42,5 +43,11 @@ public class ActionsClassHomeWork extends TestBase {
         // “Double click me" butonunu cift tiklayin
         WebElement doubleClickButton = driver.findElement(By.xpath("//div[@id='double-click']"));
         actions.doubleClick(doubleClickButton).perform();
+
+        // Tıklandığını test edin
+        String actualClass=doubleClickButton.getAttribute("class");
+        String expectedClass="div-double-click double";
+        Assert.assertEquals(expectedClass,actualClass);
+
     }
 }

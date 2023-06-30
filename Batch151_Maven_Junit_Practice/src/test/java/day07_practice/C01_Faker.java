@@ -10,13 +10,6 @@ import utilities.TestBase;
 
 public class C01_Faker extends TestBase {
 
-
-        // 'https://www.facebook.com' sayfasina gidiniz
-        // yeni hesap olustur butonuna basin
-        // isim kutusunu locate ediniz
-        // geriye kalan alanlari TAB ile dolasarak faker bilgilerle formu doldurun
-
-
     @Test
     public void test01() {
 

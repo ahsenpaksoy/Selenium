@@ -32,7 +32,7 @@ public class C02_FileDownloadTest extends TestBase {
         driver.findElement(By.xpath("(//*[text()=.])[6]")).click();
         bekle(3); // indirme suresini goz onunde bulundurarak bekle koyduk
         /*
-        İndirmemizi istediği dosyayı locate edip tıkladık ve dosyamız indirilenler klasörüne indi
+        İndirmemizi istediğimiz dosyayı locate edip tıkladık ve dosyamız indirilenler klasörüne indi
          */
 
         //Dosyanın başarıyla indirilip indirilmediğini test edelim

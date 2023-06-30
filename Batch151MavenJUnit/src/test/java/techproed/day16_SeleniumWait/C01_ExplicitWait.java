@@ -95,9 +95,11 @@ public class C01_ExplicitWait extends TestBase {
 
         //Hello World! Yazının sitede oldugunu test et
         WebElement helloWorldText = driver.findElement(By.xpath("(//h4)[2]"));
+
         //Locate'ini aldığımız helloWorldText webelementini görünür olana kadar explicit wait ile bekleyeceğim
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));//-->max.20 saniye belirttik
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='loading']")));
+
         //invisibilityOfElementLocated() methodu ile loading webelementi kaybolana kadar bekler
 
         Assert.assertEquals("Hello World!",helloWorldText.getText());
