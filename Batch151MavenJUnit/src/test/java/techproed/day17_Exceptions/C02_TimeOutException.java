@@ -60,8 +60,6 @@ public class C02_TimeOutException extends TestBase {
             locate'i doğru almalıyız
         */
 
-        //sure dogru locate yanlis
-
     }
 
     @Test

@@ -24,5 +24,6 @@ public class C02_ExtentReport extends TestBase {
         extentTest.info("Arama kutusunda iphone aratildi");
         extentTest.pass("Sayfa kapatildi");
 
+
     }
 }

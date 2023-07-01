@@ -20,7 +20,7 @@ public class C04_StaleElementReferenceException extends TestBase {
         //techproeducation sayfasına gidelim
         driver.get("https://techproeducation.com");
         bekle(2);
-        driver.findElement(By.xpath("//*[@class='eicon-close']")).click();
+        driver.findElement(By.xpath("//*[@class='eicon-close']")).click();  //reklam                    cx
 
         //arama kutusunda qa aratalım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@type='search']"));

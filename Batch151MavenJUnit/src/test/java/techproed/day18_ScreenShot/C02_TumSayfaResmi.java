@@ -22,7 +22,7 @@ public class C02_TumSayfaResmi extends TestBase {
         //Ve ekran görüntüsünü alalım
 
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "src/test/java/techproed/TumSayfaResmi/screenShot" + tarih + ".jpeg";
+        String dosyaYolu = "src/test/java/techproed/TumSayfaResmi/screenShot" +tarih + ".jpeg";
         TakesScreenshot ts = (TakesScreenshot) driver;
         Files.write(Paths.get(dosyaYolu),ts.getScreenshotAs(OutputType.BYTES));
 

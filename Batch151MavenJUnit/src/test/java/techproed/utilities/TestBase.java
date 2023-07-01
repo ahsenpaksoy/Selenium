@@ -146,6 +146,7 @@ public class TestBase {
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "src/test/java/techproed/TumSayfaResmi/screenShot" + tarih + ".jpeg";
         TakesScreenshot ts = (TakesScreenshot) driver;
+
         try {
             FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE),new File(dosyaYolu));
         } catch (IOException e) {

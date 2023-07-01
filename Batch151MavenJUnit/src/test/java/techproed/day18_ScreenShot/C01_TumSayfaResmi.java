@@ -15,7 +15,7 @@ import java.util.Date;
 public class C01_TumSayfaResmi extends TestBase {
     /*
   SCREENSHOT
-       Selenium'da tüm ekran görüntüsünü alabilmek için TakesScreenShot arayünden bir obje oluşturup
+       Selenium'da tüm ekran görüntüsünü alabilmek için TakesScreenShot arayüzunden bir obje oluşturup
    driver'a eşitleriz. Arayüzler farklı olduğu için casting yaparız. Ve bu oluşturduğumuz obje ile
    getScreenshotAs methodu ile sayfanın resmini alırız. Almış olduğumuz resmi projemizde nereye kaydedeceksek
    oranın yolunu belirtiriz.
@@ -68,8 +68,8 @@ public class C01_TumSayfaResmi extends TestBase {
      */
         //Techproeducation sayfasına gidelim
         driver.get("https://techproeducation.com");
-
         bekle(2);
+
         //Çıkan reklamı kapatalım
         driver.findElement(By.xpath("//i[@class='eicon-close']")).click();
 
