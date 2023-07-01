@@ -197,7 +197,7 @@ public class TestBase {
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);//-->HTML formatında raporlamayı başlatacak
 
-        //Raporda gözükmesini isteğimiz bilgiler için
+        //Raporda gözükmesini istediğimiz bilgiler için
         extentReports.setSystemInfo("Browser",browser);
         extentReports.setSystemInfo("Tester","Ahsen");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
