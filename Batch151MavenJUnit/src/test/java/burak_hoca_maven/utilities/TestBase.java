@@ -3,6 +3,7 @@ package burak_hoca_maven.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -88,6 +89,16 @@ public class TestBase {
 
         wait.until(ExpectedConditions.visibilityOf(element));
 
+    }
+
+    public void click(WebElement element){
+        try {
+            element.click();
+        } catch (Exception e) {
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();",element);
+        }
     }
 
 }
