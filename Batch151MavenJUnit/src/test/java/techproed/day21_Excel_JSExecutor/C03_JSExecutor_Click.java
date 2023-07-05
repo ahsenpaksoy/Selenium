@@ -79,7 +79,7 @@ public class C03_JSExecutor_Click extends TestBase {
 
         //Başlığın Sell içerdiğini test edelim
         Assert.assertTrue(driver.getTitle().contains("Sell"));
-        
+
         //Sayfanın resmini alalım
         tumSayfaResmi();
 

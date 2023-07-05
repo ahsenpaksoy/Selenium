@@ -30,7 +30,7 @@ public class C02_ReadExcel {
         Sheet sheet = workbook.getSheet("Sheet1");
 
         // 5- Belirttigimiz sayfadaki satir(row) bilgisini secmemiz gerekir
-        Row row = sheet.getRow(0);  // Satirda index 0 dan basladigi icin1. satiri getirir.
+        Row row = sheet.getRow(0);  // Satirda index 0 dan basladigi icin 1. satiri getirir.
 
         // 6- Belirttigimiz satirdaki hucre(cell) bilgisini secmemiz gerekir
         Cell cell = row.getCell(0);
