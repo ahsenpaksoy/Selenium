@@ -3,7 +3,7 @@ package burak_hoca_maven.day17_Exception;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import techproed.utilities.TestBase;
+import burak_hoca_maven.utilities.TestBase;
 
 public class C04_StaleElementReferenceException extends TestBase {
     /*

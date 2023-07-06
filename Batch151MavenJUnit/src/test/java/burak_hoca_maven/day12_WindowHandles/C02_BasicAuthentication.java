@@ -1,7 +1,7 @@
 package burak_hoca_maven.day12_WindowHandles;
 
 
-import burak_hoca_maven.day10_TestBase.TestBase;
+import burak_hoca_maven.utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;

@@ -44,19 +44,24 @@ public class TestBase {
     }
 
     //AcceptAlert
-    public void acceptAlert(){
+    public void alertAccept(){
         driver.switchTo().alert().accept();
     }
 
     //DismisstAlert
-    public void dismissAlert(){
+    public void alertDismiss(){
         driver.switchTo().alert().dismiss();
     }
 
-    //getTextAlert
-    public String getTextAlert(){
-        return driver.switchTo().alert().getText();
+    public void alertPrompt(String text){
+        driver.switchTo().alert().sendKeys(text);
     }
+
+    //getTextAlert
+    public void alertText(){
+        System.out.println(driver.switchTo().alert().getText());
+    }
+
 
     //sendKeysAlert
     public void sendKeysAlert(String text) {
@@ -66,19 +71,19 @@ public class TestBase {
 
 
     //DropDown VisibleText
-    public void selectVisibleText(WebElement ddm, String text){
+    public void  ddmVisibleText(WebElement ddm, String text){
         Select select = new Select(ddm);
         select.selectByVisibleText(text);
     }
 
     //DropDown Index
-    public void selectIndex(WebElement ddm,int index){
+    public void ddmIndex(WebElement ddm,int index){
         Select select = new Select(ddm);
         select.selectByIndex(index);
     }
 
     //DropDown Value
-    public void selectValue(WebElement ddm,String value){
+    public void ddmValue(WebElement ddm,String value){
         Select select = new Select(ddm);
         select.selectByValue(value);
     }

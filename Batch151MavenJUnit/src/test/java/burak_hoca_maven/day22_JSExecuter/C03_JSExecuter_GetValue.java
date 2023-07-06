@@ -13,8 +13,8 @@ public class C03_JSExecuter_GetValue extends TestBase {
 
         // https://www.carettahotel.com/ sayfasına gidiniz
         driver.get("https://www.carettahotel.com/");
-        driver.findElement(By.xpath("//button[@id='details-button']")).click();
-        driver.findElement(By.xpath("//a[@id='proceed-link']")).click();
+        driver.findElement(By.xpath("//button[@id='details-button']")).click(); // gelismis butonu
+        driver.findElement(By.xpath("//a[@id='proceed-link']")).click(); // alttaki linke tiklama
 
         // Check-In Date kısmını JS ile locate ediniz
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -36,7 +36,7 @@ public class C03_JSExecuter_GetValue extends TestBase {
         // Check-In Date kısmına 5/25/2023 tarihini yazınız
         date.clear();
         date.sendKeys("5/25/2023");
-        
+
         // Check-In Date kısmının degerini yazdırın.
         String valueAttribute = (String) js.executeScript("return document.getElementById('checkin_date').value");
         System.out.println(valueAttribute);
