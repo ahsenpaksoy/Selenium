@@ -87,7 +87,7 @@ public class C01_WebTables extends TestBase {
 
     }
     //ÖDEV
-    // C03_WebTables class'ı için aldığımız rapora gidelim
+    // C01_WebTables class'ı için aldığımız rapora gidelim
     // NOT : driver.get("testOutput/extentReports/extentReport_09_53_35_26062023.html")
     // Başlığın Extent Report olduğunu test edelim
     // Rapor temasını dark yapalım
