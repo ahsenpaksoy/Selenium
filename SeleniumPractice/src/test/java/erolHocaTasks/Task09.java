@@ -37,6 +37,7 @@ public class Task09 extends TestBase {
         //https://www.selenium.dev/downloads/ adresine gidelim
         driver.get("https://www.selenium.dev/downloads/");
         extentTest.info("Selenium.dev sayfasına gidildi");
+        bekle(2);
 
         //Sayfanın resmini alalım
         tumSayfaResmi();
@@ -82,9 +83,7 @@ public class Task09 extends TestBase {
 
         String sayfa2Handle = "";
         for (String each : windowHandleSeti) {
-
             if (!each.equals(sayfa1Handle)) {
-
                 sayfa2Handle = each;
             }
         }
@@ -92,9 +91,7 @@ public class Task09 extends TestBase {
 
         WebElement chromedriver = driver.findElement(By.xpath("/html/body/table/tbody/tr[7]/td[2]/a"));
         chromedriver.click();
-
         bekle(8);
-
         extentTest.info("chromedriver indirdik ");
 
         //Driver'in indiğini doğrulayalım

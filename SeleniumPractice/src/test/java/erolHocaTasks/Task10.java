@@ -68,3 +68,55 @@ public class Task10 extends TestBase {
 
     }
 }
+
+
+        /*
+
+        import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import utililities.TestBase;
+
+import java.util.List;
+
+public class C02 extends TestBase {
+    @Test
+    public void test01() {
+        //https://www.techlistic.com/p/demo-selenium-practice.html adresine gidelim
+        driver.get("https://www.techlistic.com/p/demo-selenium-practice.html");
+
+        //Demo Table altındaki tablodaki otel bilgilerini yazdırınız
+        System.out.println(driver.findElement(By.xpath("(//table)[2]")).getText());
+
+        //Demo Table altındaki otel bilgileri olan tablodan Height değeri 601m olan otelin bilgilerini yazdırınız
+        System.out.println(driver.findElement(By.xpath("(//table)[2]//tr[2]")).getText());
+
+        //Bütün Height bilgilerini yazdırınız
+        System.out.println("**********Bütün Height bilgileri*****************");
+        List<WebElement> heightList=driver.findElements(By.xpath("(//table)[2]//td[3]"));
+        for (WebElement w:heightList
+        ) {
+            System.out.print(w.getText());
+        }
+
+        //Otel uzunluklarının hepsini toplayınız
+        int sum=0;
+        for (WebElement w:heightList) {
+            int intHeight=Integer.parseInt(w.getText().replace("m",""));
+            sum+=intHeight;
+
+        }
+        System.out.println(sum);
+
+        //Bir method ile satır ve sutun bilgilerini çağıralım
+        System.out.println(printData(4, 3));
+
+    }
+
+    private String printData(int satir, int sutun) {
+        WebElement satirSutun = driver.findElement(By.xpath("(//tbody)[2]//tr["+satir+"]//td["+sutun+"]"));
+        return satirSutun.getText();
+    }
+}
+
+         */
