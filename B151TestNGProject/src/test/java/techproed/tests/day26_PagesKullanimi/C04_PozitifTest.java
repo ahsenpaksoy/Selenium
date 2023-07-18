@@ -30,6 +30,9 @@ public class C04_PozitifTest {
         //Giris yapildigini dogrula
         Assert.assertTrue(blueRentalPage.verify.getText().contains("Jack"));
 
+        //Sayfayi kapatiniz
+        Driver.closeDriver();
+
 
     }
 }

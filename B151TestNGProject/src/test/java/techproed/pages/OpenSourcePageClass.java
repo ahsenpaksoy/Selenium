@@ -25,7 +25,7 @@ public class OpenSourcePageClass {
         return Driver.getDriver().findElement(By.xpath("//h6"));
     }
 
-
+    // bu ikinci yontem. burda method olusturup diger tarafta class ismiyle cagirdik.
 
 
 }
