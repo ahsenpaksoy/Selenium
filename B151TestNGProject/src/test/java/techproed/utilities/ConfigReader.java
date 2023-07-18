@@ -8,8 +8,9 @@ import java.util.Properties;
 public class ConfigReader {
     /*
     .properties uzantılı dosyaya erişebilmemiz için Properties class'ından obje oluşturmamız gerekir.
-    bu oluşturduğumuz obje ile akışa aldığımız dosya yolunu load(fis) methodu ile properties dosyasındaki
+    bu oluşturduğumuz obje ile akışa aldığımız dosya yolunu properties.load(fis) methodu ile properties dosyasındaki
     key değerini return edebiliriz
+    Bunu yapmak icin parametreli bir method ollusturur girdigimiz key'in degerini bize dondurur.
      */
     static Properties properties;
     static {
@@ -23,6 +24,7 @@ public class ConfigReader {
     }
     public static String getProperty(String key){
 
+        // String value = properties.getProperty(key);
         return properties.getProperty(key);//-->getProperty(key) methodu properties dosyasındaki key'in değerini verir
 
 

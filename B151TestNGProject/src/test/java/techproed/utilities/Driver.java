@@ -8,7 +8,7 @@ import java.time.Duration;
 /*
    POM(Page Object Model)
          Test senaryolarinin daha az kod ile yazilmasina ve bakiminin daha kolay yapilmasina
-   olanak saglayan yazilim test yontemidir. TestNG de ve CUCUMBER da POM kalibini kullaniriz.
+   olanak saglayan yazilim test yontemidir. TestNG ve CUCUMBER frameworklerinde  POM kalibini kullaniriz.
  */
 
 public class Driver {
@@ -21,7 +21,7 @@ public class Driver {
     }
     static WebDriver driver;
     public static WebDriver getDriver(){
-        if(driver == null){
+        if(driver == null){  // Driver'a deger atanmamissa
             /*
                   Driver'i her cagirdigimizda yeni bir pencere acilmasinin onune gecmek icin if
              blogu icinde Eger driver'a deger atanmamissa deger ata, eger deger atanmissa
@@ -32,7 +32,6 @@ public class Driver {
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
-
         return driver;
     }
     public static void closeDriver(){

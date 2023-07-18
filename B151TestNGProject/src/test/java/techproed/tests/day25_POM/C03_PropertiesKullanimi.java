@@ -19,9 +19,21 @@ public class C03_PropertiesKullanimi {
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
         //arama kutusunda iphone aratalım
-        Driver.getDriver().findElement(By.id("twotabsearchtextbox")).sendKeys(ConfigReader.getProperty("searchBox"));
+        Driver.getDriver().findElement(By.id("twotabsearchtextbox")).sendKeys(ConfigReader.getProperty("searchBox"), Keys.ENTER);
+
         //sayfayi kapatin
         Driver.closeDriver();
+
+        // google sayfasina gidelim
+        Driver.getDriver().get(ConfigReader.getProperty("googleUrl"));
+
+        //sayfayi kapatiniz
+        Driver.closeDriver();
+
+        // facebook sayfasina gidiniz
+        Driver.getDriver().get("https://facebook.com");
+
+
     }
 
     @Test
