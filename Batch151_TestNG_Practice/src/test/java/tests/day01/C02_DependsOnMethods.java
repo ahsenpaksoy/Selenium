@@ -50,9 +50,9 @@ public class C02_DependsOnMethods {
         Assert.assertTrue(aramaSonucu.getText().contains("Nutella"));
     }
     /**
-     DependsOnMethod = test methodlarinin calisma sirasina karismaz.
-     Sadece bagli olan test baglandigi test'in sonucuna bakar.
-     Eger baglandigi test passed olmazsa, baglanan test hic calismaz kendisini Ignore eder.
+     DependsOnMethods test methodlarının calısma sırasına karısmaz.
+     sadece baglı olan test, baglandıgı testin sonucuna bakar
+     baglandıgı test passed olmazsa, baglanan test hic calısmaz.
 
      */
 

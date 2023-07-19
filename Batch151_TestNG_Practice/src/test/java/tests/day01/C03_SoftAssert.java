@@ -17,21 +17,19 @@ public class C03_SoftAssert extends TestBase {
 
     // test islemlerini softAssert ile yapınız ve hatalar icin mesaj versin
 
-
     @Test
     public void test01() {
 
         // "https://amazon.com" sayfasına gidiniz
         driver.get("https://amazon.com");
 
-        /// Title'in "Amazon" icerdigini test edin
-        SoftAssert softAssert = new SoftAssert();
-
+        // Title'in "Amazon" icerdigini test edin
         // softAssert instance oldugu icin ilk once obje olusturulur.
+        SoftAssert softAssert = new SoftAssert();
         String  amazonTitle = driver.getTitle();
         softAssert.assertTrue(amazonTitle.contains("Amazon"),"TİTLE AMAZON İCERMİYOR");
 
-        /// Arama kutusunun erisilebilir oldugunu test edin
+        // Arama kutusunun erisilebilir oldugunu test edin
         WebElement aramaKutusu =  driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         softAssert.assertTrue(aramaKutusu.isEnabled(),"ARAMA KUTUSUNA ERİSİLEMİYOR");
 
