@@ -27,11 +27,13 @@ public class C01_NegatifTest {
         blueRentalPage.login.click();
         blueRentalPage.email.sendKeys(ConfigReader.getProperty("fakeEmail"), Keys.TAB,
                                        ConfigReader.getProperty("fakePassword"), Keys.ENTER);
+
+        //Hata mesajinin gorunur oldugunu dogrula
         ReusableMethods.visibleWait(blueRentalPage.mesajVerify,5);
         Assert.assertTrue(blueRentalPage.mesajVerify.isDisplayed());
 
-
-
+        //Sayfayi kapatiniz
+        Driver.closeDriver();
 
     }
 }

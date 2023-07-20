@@ -21,8 +21,17 @@ public class BlueRentalCarPage {
     @FindBy(xpath = "//*[@name='password']")
     public WebElement password;
 
-    @FindBy(xpath = "//*[@class='Toastify__toast-body']")
+    @FindBy(xpath = "//*[@class='Toastify__toast-body']") // Bad credentials text'i
     public WebElement verify;
+
+    @FindBy(xpath = "(//*[@type='button'])[1]")
+    public WebElement loginVerify;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement invalidEmail;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    public WebElement reservations;
 
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[1]")
     public WebElement verify1;

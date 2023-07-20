@@ -38,7 +38,6 @@ public class C04_BlueRentalExcelTest {
             rentalPage.logOut.click();
             ReusableMethods.bekle(2);
             rentalPage.ok.click();
-
         }
 
         //Sayfayi kapatiniz
