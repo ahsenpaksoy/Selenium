@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,11 +29,16 @@ public class C16 {
         driver.get("http://automationexercise.com");
 
         // Verify that home page is visible successfully
-        WebElement text = driver.findElement(By.xpath("//div[@class='logo pull-left']"));
-
+        WebElement automationExercise = driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
+        Assert.assertTrue(automationExercise.isDisplayed());
 
         // Click 'Signup / Login' button
+        driver.findElement(By.xpath("//a[@href='/login']")).click();
+
         // Fill email, password and click 'Login' button
+        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Ali Can", Keys.TAB, "rana57.aba.aba.aba.aba.aba.@gmail.com");
+        driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
+
         // Verify 'Logged in as username' at top
         // Add products to cart
         // Click 'Cart' button

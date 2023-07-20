@@ -60,6 +60,8 @@ public class C03_SoftAssert extends TestBase {
         eger softAssert.assertAll()'da hata bulunursa calısma durur.
         ve class'ın kalan kısmı calısmaz.
 
+        softAssert.assertAll() a kadar hicbir hatayla karsilasmadigi icin kendisinden sonra gelen kodlari da calistirir
+
          */
 
     }
