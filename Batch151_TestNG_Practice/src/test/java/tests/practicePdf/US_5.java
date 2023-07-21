@@ -20,7 +20,7 @@ public class US_5 {
         // Giris   yapildiginda hata mesaji alınmamalı
 
         Driver.getDriver().get(ConfigReader.getProperty("blueRentalUrl"));
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
 
         BlueRentalCarPage carPage = new BlueRentalCarPage();
         Select select = new Select(carPage.ddm);
@@ -30,7 +30,7 @@ public class US_5 {
                 ConfigReader.getProperty("DropOffLocation"),Keys.TAB, ConfigReader.getProperty("pickUpDate"),
                 Keys.TAB, ConfigReader.getProperty("pickUpTime"), Keys.TAB, ConfigReader.getProperty("dropOffDate"),
                 Keys.TAB, ConfigReader.getProperty("dropOffTime"), Keys.TAB, Keys.ENTER);
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
 
         Assert.assertTrue(carPage.verifyson.isDisplayed());
 

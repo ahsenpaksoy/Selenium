@@ -18,14 +18,14 @@ public class US_4 {
 
         //Geçerli email uzantısı olmadan kullanıcı girişi yapılamamalı
         Driver.getDriver().get(ConfigReader.getProperty("blueRentalUrl"));
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
 
         BlueRentalCarPage blueRentalCarPage = new BlueRentalCarPage();
         blueRentalCarPage.login.click();
         blueRentalCarPage.email.sendKeys(ConfigReader.getProperty("gecersizMail"));
-        ReusableMethods.bekle(1);
+        ReusableMethods.waitFor(1);
         blueRentalCarPage.password.sendKeys(ConfigReader.getProperty("blueRentalpassword"), Keys.ENTER);
-        ReusableMethods.bekle(1);
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(blueRentalCarPage.invalidEmail.isDisplayed());
 
     }
@@ -35,14 +35,14 @@ public class US_4 {
 
         //Dogru email uzantisi girildiğinde hata mesajı alınmamalı
         Driver.getDriver().get(ConfigReader.getProperty("blueRentalUrl"));
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
 
         BlueRentalCarPage blueRentalCarPage = new BlueRentalCarPage();
         blueRentalCarPage.login.click();
         blueRentalCarPage.email.sendKeys(ConfigReader.getProperty("blueRentalMail"));
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
         blueRentalCarPage.password.sendKeys(ConfigReader.getProperty("blueRentalpassword"), Keys.ENTER);
-        ReusableMethods.bekle(2);
+        ReusableMethods.waitFor(2);
 
         blueRentalCarPage.loginVerify.click();
         Assert.assertTrue(blueRentalCarPage.reservations.isDisplayed());
