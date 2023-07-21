@@ -37,25 +37,25 @@ public class BlueRentalCarPage {
     public WebElement verify1;
 
     @FindBy(xpath = "//*[@name='car']")
-    public WebElement select;
+    public WebElement ddm;
 
     @FindBy(xpath = "//*[@name= 'pickUpLocation']")
-    public WebElement pkLocation;
+    public WebElement pickLocation;
 
     @FindBy(xpath = "//*[@name= 'dropOfLocation']")
-    public WebElement drLocation;
+    public WebElement dropLocation;
 
     @FindBy(xpath = "//*[@name= 'pickUpDate']")
-    public WebElement pkDate;
+    public WebElement pickDate;
 
     @FindBy(xpath = "//*[@name= 'pickUpTime']")
-    public WebElement pkTime;
+    public WebElement pickTime;
 
     @FindBy(xpath = "//*[@name='dropOffDate']")
-    public WebElement drDate;
+    public WebElement dropDate;
 
     @FindBy(xpath = "//*[@name='dropOffTime']")
-    public WebElement drTime;
+    public WebElement dropTime;
 
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement continueReserv;
