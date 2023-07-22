@@ -25,12 +25,12 @@ public class AmazonPage {
     public WebElement ikinciUrun;
 
 
+
     // C02_Raporlama
 
     // sonuc yazisinin "Java" icerdigini test edin
     @FindBy(xpath = "//*[@class='a-section a-spacing-small a-spacing-top-small']")
     public WebElement sonucYazisi;
-
 
 
 
