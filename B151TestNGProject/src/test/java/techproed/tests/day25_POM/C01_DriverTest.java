@@ -5,11 +5,13 @@ import techproed.utilities.Driver;
 
 public class C01_DriverTest {
 
+
     @Test
     public void testName() {
         Driver.getDriver().get("https://amazon.com");
         Driver.closeDriver();
     }
+
 
     @Test
     public void test01() {
