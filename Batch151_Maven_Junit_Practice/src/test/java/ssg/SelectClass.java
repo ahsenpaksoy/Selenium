@@ -3,8 +3,10 @@ package ssg;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
@@ -111,6 +113,54 @@ public class SelectClass extends TestBase {
         Assert.assertEquals(0,select.getAllSelectedOptions().size());
 
     }
+
+    @Test
+    public void selectTest03() {
+    /*
+        TEST-03:
+        1. letcode.in/dropdowns adresine gidin.
+        2. Ülkeler menüsünün tıklanabilir olduğunu doğrulayın.
+        3. Ülkeler menüsünden India seçeneğini value attribute değeri ile seçin.
+        4. Seçilen seçeneğin India olduğunu doğrulayın.
+        5. Listede Uruguay seçeneğinin olduğunu doğrulayın.
+    */
+        driver.get("https://letcode.in/dropdowns");
+        WebElement ulkeler = driver.findElement(By.id("country"));
+        Assert.assertTrue(ulkeler.isEnabled());
+        Select ulkeSelect = new Select(ulkeler);
+        ulkeSelect.selectByValue("India");
+        Assert.assertEquals("India", ulkeSelect.getFirstSelectedOption().getText());
+        List<WebElement> ulkeList = ulkeSelect.getOptions();
+        boolean uruguayVarMi = false;
+        for (WebElement ulke : ulkeList) {
+            if (ulke.getText().equals("Uruguay")){
+                uruguayVarMi = true;
+                break;
+            }
+        }
+        Assert.assertTrue(uruguayVarMi);
+    }
+    @Test
+    public void selectTest05() {
+    /*
+        TEST-05:
+            1. letcode.in/dropdowns adresine gidin.
+            2. Meyveler menüsünden Apple seçeneğini Select class kullanmadan seçin.
+            3. Seçilen seçeneğin Apple olduğunu doğrulayın.
+            4. Menüde seçilen seçeneği yazdırın.
+    */
+        driver.get("https://letcode.in/dropdowns");
+        WebElement meyveler = driver.findElement(By.id("fruits"));
+        meyveler.click();
+        WebElement apple = driver.findElement(By.xpath("//option[@value='0']"));
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.ARROW_DOWN).keyDown(Keys.ENTER).build().perform();
+        Assert.assertEquals("Apple", apple.getText());
+        System.out.println(apple.getText());
+    }
+
+
+
 }
 
 
