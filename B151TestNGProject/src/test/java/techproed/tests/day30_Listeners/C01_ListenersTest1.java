@@ -38,16 +38,15 @@ onTestFailedButWithinSuccessPercentage() methodu devreye girer.
     @Test
     public void test03() {
         System.out.println("SKIP");
-        throw new SkipException("Bu method atlandi");
+        throw new SkipException("Bu method atlandı");
     }
 
     @Test
     public void test04() {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
-        Driver.getDriver().findElement(By.id("kjdgsshdj")).click();
+        Driver.getDriver().findElement(By.id("lkhjlkjhlj")).click();
     }
 }
-
 
 
 

@@ -32,6 +32,4 @@ public class C02_ListenersTest2 {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
         Driver.getDriver().findElement(By.id("lkhjlkjhlj")).click();
     }
-
-
 }
