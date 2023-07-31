@@ -32,7 +32,7 @@ public class C02_DataProviderTest {
         ReusableMethods.bekle(3);
 
         //Her arama icin sayfa resmi alalim sayfayi kapatalim
-        ReusableMethods.tumSayfaResmi();
+        ReusableMethods.tumSayfaResmi(araclar);
         ReusableMethods.bekle(2);
 
         //Sayfayi kapatalim

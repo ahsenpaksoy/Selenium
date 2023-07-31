@@ -89,7 +89,7 @@ public class WindowHandle extends TestBase {
         driver.get("https://www.fakemail.net/");
         WebElement fakeEmail = driver.findElement(By.id("email"));
         String eposta = fakeEmail.getText();
-        
+
         List<String> pencereler = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(pencereler.get(0));
         emailKutusu.sendKeys(eposta);
