@@ -23,6 +23,18 @@ testlerimizi çalıştırır. successPercentage = 90 bu parametre ise yüzdelik 
 kullanılırsa 10 testten 1 tanesi çalışmaz ise sorun olmaz ama 2 tanesi çalışmaz ise
 onTestFailedButWithinSuccessPercentage() methodu devreye girer.
      */
+
+     /*
+    Test methodlarınızı birden fazla çalıştırmak isterseniz @ test notasyonundan sonrava invocationCount
+    parametresi ile belirttiğimiz sayı kadar testlerimiz tekrar çalışır.
+    Listeners ile onTestFailedButWithinSuccessPercentage() bu methodu kullanmak istersek @Test notasyonundan sonra
+    invocationCount = 10 ile birlikte successPercentage parametresi kullanarak ornegin testlerim 10 kez calissin
+    successPercentage parametresine belirttigim %90 bize 10 kez calisan testlerimizden 1 tanesi fail olsa bile
+    bu testi passed olarak verecektir. Eger iki test fail olursa onTestFailedButWithinSuccessPercentage() bu method
+    devreye girecektir.
+
+    */
+
     public void test01() {
         System.out.println("PASSED");
         Assert.assertTrue(true);
@@ -33,6 +45,7 @@ onTestFailedButWithinSuccessPercentage() methodu devreye girer.
     public void test02() {
         System.out.println("FAILED");
         Assert.assertTrue(false);
+        //Ekran resmi almak icin browser'i acti
     }
 
     @Test
@@ -44,7 +57,7 @@ onTestFailedButWithinSuccessPercentage() methodu devreye girer.
     @Test
     public void test04() {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
-        Driver.getDriver().findElement(By.id("lkhjlkjhlj")).click();
+        Driver.getDriver().findElement(By.id("lkhjlkjhlj")).click(); //Bilerek hata aldik burda
     }
 }
 
