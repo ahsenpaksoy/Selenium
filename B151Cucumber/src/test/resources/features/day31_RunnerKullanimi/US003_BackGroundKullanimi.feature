@@ -1,9 +1,11 @@
 @tech
 Feature: US003 Techproeducation Sayfasi Testi
 
-  #Feature file içinde Scenario larda ortak kullanilan step'lerde Background: yapisini kullanabiliriz.
+  #Feature file içinde Scenario larda ortak kullanilan step'lerde Background: yapisini Feature:
+  # yapisindan sonra kullanabiliriz.
   #Her scenario'dan önce buradaki step çalışır sonra scenario'daki stepler çalişmaya devam eder
   #Burda ortak adim olan Given i scenario lardan sildik Background un icine koyduk.
+
   Background: Kullanici TechproEducation sayfasina gider
     Given kullanici techpro sayfasina gider
 

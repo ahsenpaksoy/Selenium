@@ -2,6 +2,7 @@ Feature: US004 TechProEducation Arama Testi
   Scenario: TC01 Sayfada Arama Yapar
     Given kullanici "https://techproeducation.com" sayfasina gider
     Then arama kutusunda "mobile" aratir
+    And kullanici 2 saniye bekler
     When cikan dropdown da mobile developer linkine tiklar
     And sayfa basliginin Mobile icerdigini test eder
     And sayfayi kapatir

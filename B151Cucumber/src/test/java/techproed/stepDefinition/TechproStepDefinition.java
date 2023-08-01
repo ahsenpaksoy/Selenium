@@ -65,6 +65,15 @@ public class TechproStepDefinition {
     public void aramaKutusundaAratir(String str) {
         techproPage.aramaKutusu.sendKeys(str);
     }
+
+    @And("kullanici {int} saniye bekler")
+    public void kullaniciSaniyeBekler(int sayi) {
+        try {
+            Thread.sleep(sayi*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
 
 
