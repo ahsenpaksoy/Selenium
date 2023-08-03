@@ -10,10 +10,15 @@ Runner class'ı testNG deki .xml file kullanımındaki gibi istediğimiz scenari
 sayesinde çalıştırabiliriz. Ve plugin parametresi ile raporlar alabiliriz
  */
 @RunWith(Cucumber.class)//-->Test çalıştırıcı Notasyon.Cucumber ile junit arasinda entegrasyonu saglar
-@CucumberOptions(features = "src/test/resources/features",
-        glue = {"techproed/stepDefinition"},
-        tags = "@tech",  //"@techpro or @iphone",
-        dryRun = false //-->true seçersek scenarioları kontrol eder browser'ı çalıştırmaz
+@CucumberOptions(plugin = {"pretty",
+                            "html:target/default-cucumber-reports.html",
+                            "json:target/json-reports/cucumber.json",
+                            "junit:target/xml-report/cucumber.xml"},
+                features = "src/test/resources/features",
+                glue = {"techproed/stepDefinition"},
+                tags = "@tech",  //"@techpro or @iphone",
+                dryRun = false,//-->true seçersek scenarioları kontrol eder browser'ı çalıştırmaz
+                monochrome = false // false olursa console'daki ciktilar renkli olur
 )
 
 public class Runner {
