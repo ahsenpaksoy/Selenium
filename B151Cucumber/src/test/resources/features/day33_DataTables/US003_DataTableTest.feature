@@ -9,3 +9,5 @@ Feature: US003 BlueRentalCar Login Islemi
       | sam.walker@bluerentalcars.com | c!fas_art |
       | kate.brown@bluerentalcars.com | tad1$Fas  |
     And sayfayi kapatir
+
+    #bu senaryoyu map ile yaptik

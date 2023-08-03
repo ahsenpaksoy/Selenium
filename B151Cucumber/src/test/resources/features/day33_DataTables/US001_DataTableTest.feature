@@ -21,4 +21,4 @@ Feature: US001 Google Sayfasinda Urun Aramasi
 #bu datalara ulaşabiliriz.
 
 
-#AltGr+<>  --> |sorun ne bu class da ignore hatasi veriyor dener misini
+#AltGr+<>  --> |

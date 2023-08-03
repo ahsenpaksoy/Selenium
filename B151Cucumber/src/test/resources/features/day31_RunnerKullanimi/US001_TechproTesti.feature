@@ -11,6 +11,7 @@ Feature: US001 Techproeducation Sayfasi Testi
   #Yukaridaki ornekte sayfayi kapatir step'i icin daha once amazonStepDefinition class'inda olusturdugumuz methodu
   # kullanabiliriz
 
+  @g
   Scenario: TC02 Sayfada Arama Yapar
     Given kullanici techpro sayfasina gider
     Then arama kutusunda java aratir
