@@ -22,3 +22,6 @@ Feature: US001 Google Sayfasinda Urun Aramasi
 
 
 #AltGr+<>  --> |
+
+  #Tabloyu oluşturduğumuz step'in method'una parametre olarak cucumber.io dan DataTable parametresini ekleriz.
+  #Bu parametre sayesinde oluşturmus olduğumuz tabloyu bir list'e dönüstürüp loop ile verileri kullanabiliriz.

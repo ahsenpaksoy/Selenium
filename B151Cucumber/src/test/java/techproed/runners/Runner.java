@@ -16,7 +16,7 @@ sayesinde çalıştırabiliriz. Ve plugin parametresi ile raporlar alabiliriz
                             "junit:target/xml-report/cucumber.xml"},
                 features = "src/test/resources/features",
                 glue = {"techproed/stepDefinition"},
-                tags = "@g",  //"@techpro or @iphone",
+                tags = "@arac2",  //"@techpro or @iphone",
                 dryRun = false,//-->true seçersek scenarioları kontrol eder browser'ı çalıştırmaz
                 monochrome = false // false olursa console'daki ciktilar renkli olur
 )
@@ -40,11 +40,7 @@ alakalı seçanekleri bu notasyonda belirtiriz
   //or kullaninca "@techpro or @iphone" techpro veya iphone a sahip olan hangisiyse onlari calistirir
 
 
-
-
-
-
-
+//zeynep hanimin notu
   //Biz detayli raporu sadece Runner'da calistirinca alabildik. Feature'da detayli rapor almak icin:
 //https://reports.cucumber.10 adresinden raporlamalari alabiliriz. Ancak resources altinda cucumber.properties
 //isimli bir dosya olusturmaliyiz.
