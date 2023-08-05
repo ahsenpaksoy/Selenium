@@ -42,9 +42,22 @@ Bu notasyonlar'ın importu io.cucumber dan olmalıdır.
         if (scenario.isFailed()) {//-->Scenario fail olursa
             TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
             scenario.attach(ts.getScreenshotAs(OutputType.BYTES), "image/jpeg", "scenario_" + scenario.getName());
+            Driver.closeDriver();
         }
-        Driver.closeDriver();
+
     }
     //Bu method fail olan scenario'larda fail olan kısmın resmini rapora ekleyecektir.
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

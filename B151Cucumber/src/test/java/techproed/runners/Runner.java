@@ -12,11 +12,13 @@ sayesinde çalıştırabiliriz. Ve plugin parametresi ile raporlar alabiliriz
 @RunWith(Cucumber.class)//-->Test çalıştırıcı Notasyon.Cucumber ile junit arasinda entegrasyonu saglar
 @CucumberOptions(plugin = {"pretty",
                             "html:target/default-cucumber-reports.html",
-                            "json:target/json-reports/cucumber.json",
-                            "junit:target/xml-report/cucumber.xml"},
+                            "json:target/json-reports/cucumber1.json",
+                            "junit:target/xml-report/cucumber.xml",
+                            "rerun:TestOutput/failed_scenario.txt"},
+                            //rerun ile balirttigimiz dosyada fail olan senaryolar tutulur.
                 features = "src/test/resources/features",
                 glue = {"techproed/stepDefinition"},
-                tags = "@arac2",  //"@techpro or @iphone",
+                tags = "@pozitif",  //"@techpro or @iphone",
                 dryRun = false,//-->true seçersek scenarioları kontrol eder browser'ı çalıştırmaz
                 monochrome = false // false olursa console'daki ciktilar renkli olur
 )
