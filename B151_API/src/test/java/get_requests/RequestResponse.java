@@ -31,7 +31,8 @@ public class RequestResponse {
 
     public static void main(String[] args) {
         // Get testi nasıl yapılır?
-        String url = "https://petstore.swagger.io/v2/pet/3435";
+        //String url = "https://petstore.swagger.io/v2/pet/3435";
+        String url = "https://petstore.swagger.io/v2/pet/46466161";
         Response response = given().when().get(url);
         response.prettyPrint();
 
@@ -71,3 +72,21 @@ public class RequestResponse {
     400 Client Error
     500 Server Error
  */
+
+   /*
+        Request ==> istek
+        Response ==> istege gonderilen cevap
+        Status code = Gelen cevabin basari durumu
+        Post ==> creat ==> Request olusturma islemi => Istek olusturma
+        Get ==> read ==>Request sorgulama => Istegin olusup olusmadigini veya
+        verilen url deki bilgilerin dogrulugunu sorgulama
+        Put ==> update ==> Request i update etme => Istegi guncelleme
+        Delete ==> delete ==> Request'i delete etme => Istegi silme islemi
+        Bu islemlere kisaca CRUD islemleri denir
+         */
+   //Status Code ile birbirine benzer bu sadece HTTP protokol versiyonunu da verir
+   //post ve put ta body gerekli
+    /*
+        post ve put islemlerinde request'in body bolumune ihtiyac duyulurken
+         get ve delete islemlerinde request'in body bolumune gerek yoktur.
+         */
