@@ -51,6 +51,8 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         response.prettyPrint();
 
         //Do assertion
+        //assertEquals(201,response.statusCode());
+
         JsonPath json = response.jsonPath();
 
         assertEquals(55,json.getInt("userId"));
@@ -71,6 +73,7 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         expectedData.put("userId",55);
         expectedData.put("title","Tidy your room");
         expectedData.put("completed",false);
+        System.out.println("expectedData = " + expectedData);
 
         //Send request and get response
         Response response = given(spec).body(expectedData).when().post("{first}"); //Burada Serialization yapiliyor
@@ -86,14 +89,22 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         assertEquals(expectedData.get("completed"),actualData.get("completed"));
         assertEquals(201,actualData.get("id"));
 
-
-
     }
 }
     //Serialization ---> Java Objesinin Json Objesine cevrilmesidir
     //Deserialization ---> Json Objesinin Java Objesine cevrilmesidir.
     //Bu işlemler için jackson-databind kütüphanesi kullanılır
     //payload==body
+
+//Biz map gondermeye calisiyoruz karsi taraf json data bekliyor. Bu nedenle IllegalStateException aliriz.
+//Serialization icin (veri donusumu) Jackson (Databind) eklentisini pom a yukleyerek handle edebiliriz
+
+//Biz map gonderiyoruz karsi tarafa ama bizden json bekleniyor, bu java objesini jason objesine donusturmeliyiz
+//Java object'in Json object'e cevrilmesine serialization deniyor
+//Bunu yapabilmek icin de POM.xml'e Jackson repository'sini ekleyecegiz
+// Serialization = Java Map datasının Json datasına çevrilmesidir
+//Deserialization ---> Json Objesinin Java Map Objesine cevrilmesidir.
+
 
 
 

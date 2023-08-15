@@ -43,6 +43,10 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
         JsonPath json = response.jsonPath();
 
         //"Id"leri 190 dan büyük olanları konsola yazdırın
+        /*
+        List<Object> idList = json.getList("findAll{it.id>190}");
+        System.out.println("ID List: " + idList);
+         */
         List<Integer> idList = json.getList("findAll{it.id>190}.userId");
         System.out.println("idList --> " + idList); //Groovy language list icindeki jsonlarda sorgulama yapip data geri cagirmamizi saglar
 
@@ -61,16 +65,23 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
         System.out.println("titleList = " + titleList);
         //System.out.println(json.getList("findAll{it.title=='delectus aut autem'}")); //title'i belirtilen json datayi getirir
 
-
         //"delectus aut autem" başlığının id numarası 5 den küçük bir kullanıcıya ait olduğunu doğrulayın
         assertTrue(titleList.contains("delectus aut autem"));
 
+        System.out.println(json.getList("findAll{it.title=='delectus aut autem'}.id"));
+        //burasi onemli ==> title'i delectus aut autem olan verinin id numarasini aldik burda
 
     }
-
-
-
 }
+
+//Groovy language list icindeki json'lari sorgulama yapip data geri cagirmamizi saglar.
+//json ile list icinden data cagirma denebillir gibi.
+
+//findAll{} bir tablo icinde arama yapmak icin kullaniriz. {} icine item 'in kisaltmasi olan
+// it yazilir ve hangi veriyi istiyorsak onun sartini ekleriz.
+
+//{} icinde sarti koyunca sarta uyan tum veriler gelirken {} den sonra . koyup neyi almak
+// istiyorsak o veriyi yazarsak sadece o veriyi aliriz.
 
 
 

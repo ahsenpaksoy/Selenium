@@ -92,9 +92,48 @@ public class Get06 extends HerokuAppBaseUrl {
         //3. softAssertion.assertAll anahtar kelimeleriyle bitirilir.
         softAssert.assertAll();
 
+        // 3. YOL (Soft Assertion) (Gurkay hocadan devam)
+        SoftAssert softAssert1 = new SoftAssert();
+        softAssert1.assertEquals(json.getString("firstname"),"Josh");
+        softAssert1.assertEquals(json.getString("lastname"),"Allen");
+        softAssert1.assertEquals(json.getInt("totalprice"),111);
+        softAssert1.assertTrue(json.getBoolean("depositpaid"));
+        softAssert1.assertEquals(json.getString("bookingdates.checkin"),"2018-01-01");
+        softAssert1.assertEquals(json.getString("bookingdates.checkout"),"2019-01-01");
+        softAssert1.assertEquals(json.getString("additionalneeds"),"super bowls");
+
+        softAssert1.assertAll();
+
+
+
+
     }
 
 }
+
+/*
+        Given
+            https://restful-booker.herokuapp.com/booking/23
+        When
+            User send a GET request to the URL
+        Then
+            HTTP Status Code should be 200
+        And
+            Response content type is "application/json"
+        And
+            Response body should be like;
+     {
+    "firstname": "Bradley",
+    "lastname": "Pearson",
+    "totalprice": 132,
+    "depositpaid": false,
+    "bookingdates": {
+        "checkin": "2022-10-27",
+        "checkout": "2022-11-07"
+    },
+    "additionalneeds": "None"
+}
+     */
 
 
 
@@ -105,6 +144,9 @@ public class Get06 extends HerokuAppBaseUrl {
 // dönen datada bize liste gelmişse özel bir bilgiye ulaşmak için index kullanılır
 // hasItem --> contain() metodu gibi
 // hasItems --> containAll() metodu gibi
+
+//Soft asserts TestNg ile gelen bir ozellik oldugu icin TestNg pom'a yuklenmeli
+
 
 
 
