@@ -5,6 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
+import org.testng.asserts.SoftAssert;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
@@ -72,13 +74,37 @@ public class Get06 extends HerokuAppBaseUrl {
         assertEquals("2018-01-01",json.getString("bookingdates.checkin"));
         assertEquals("2019-01-01",json.getString("bookingdates.checkout"));
         assertEquals("Breakfast",json.getString("additionalneeds"));
+
+        //SoftAssertion 3 adimda yapilir --> testng pom a eklenmeli
+
+        //1. Adim: SoftAssertion objesi olusturulur
+        SoftAssert softAssert = new SoftAssert();
+
+        //2.Adim: Assertion yapilir
+        softAssert.assertEquals(json.getString("firstname"),"John","first name uyusmadi------>");
+        softAssert.assertEquals(json.getString("lastname"),"Smith","last name uyusmadi ------>");
+        softAssert.assertEquals(json.getInt("totalprice"),111,"toplam ucret uyusmadi ---->");
+        softAssert.assertEquals(json.getBoolean("depositpaid"),false);
+        softAssert.assertEquals(json.getString("bookingdates.checkin"),"2018-01-01");
+        softAssert.assertEquals(json.getString("bookingdates.checkout"),"2019-01-01");
+        softAssert.assertEquals(json.getString("additionalneeds"),"Breakfast");
+
+        //3. softAssertion.assertAll anahtar kelimeleriyle bitirilir.
+        softAssert.assertAll();
+
     }
 
 }
 
 
 
+//hasSize() methodu kac tane data oldugunu sorgulamak icin kullanilir
+//hasItem() methodu list icerisinde verilen elemanin olup olmadigini sorgulamak icin kullanilir
+//hasSize() methodu kac tane data oldugunu sorgulamak icin kullanilir
 
+// dönen datada bize liste gelmişse özel bir bilgiye ulaşmak için index kullanılır
+// hasItem --> contain() metodu gibi
+// hasItems --> containAll() metodu gibi
 
 
 

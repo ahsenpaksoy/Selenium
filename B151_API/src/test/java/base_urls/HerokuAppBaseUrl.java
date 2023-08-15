@@ -17,3 +17,4 @@ public class HerokuAppBaseUrl {
     }
 
 }
+// Her sorguda tekrar eden dataları buraya gireceğiz
