@@ -19,11 +19,24 @@ public class HerOkuAppTestData {
         expectedDataMap.put("totalprice",totalprice);
         expectedDataMap.put("depositpaid",depositpaid);
         expectedDataMap.put("bookingdates",bookingdates);
-        expectedDataMap.put("additionalneeds",additionalneeds);
+        if(additionalneeds!=null){
+            expectedDataMap.put("additionalneeds",additionalneeds);
+        }
         return expectedDataMap;
     }
-
+/*    Bu method da kullanılabilir! Ama her farklı parametre kombinasyonu için yeni metod ne kadar mantıklı olur?
+    public Map<String,Object> expectedDataMapper (String firstname, String lastname,Integer totalprice,Boolean depositpaid,Map<String,String> bookingdates){
+        Map<String, Object> expectedDataMap = new HashMap<>();
+        expectedDataMap.put("firstname",firstname);
+        expectedDataMap.put("lastname",lastname);
+        expectedDataMap.put("totalprice",totalprice);
+        expectedDataMap.put("depositpaid",depositpaid);
+        expectedDataMap.put("bookingdates",bookingdates);
+        return expectedDataMap;
+    }
+ */
 }
+
 
 
 

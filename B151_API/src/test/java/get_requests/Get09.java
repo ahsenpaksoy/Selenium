@@ -1,6 +1,7 @@
 package get_requests;
 
 import base_urls.HerokuAppBaseUrl;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 import test_data.HerOkuAppTestData;
@@ -80,14 +81,27 @@ public class Get09 extends HerokuAppBaseUrl {
         // Set Url
         spec.pathParams("first","booking"
                 ,"second", 92);
-
         // Set expected data
-        Map<String , String> bookingMap = new HerOkuAppTestData().bookingDateMapper("2018-01-01","2019-01-01");
+        Map<String , String> bookingMap = new HerOkuAppTestData()
+                .bookingDateMapper("2018-01-01","2019-01-01");
+        Map<String,Object> expectedDataMap = new HerOkuAppTestData()
+                .expectedDataMapper("John","Smith"
+                        ,111,true,bookingMap
+                        , "Breakfast");
+        // Sent Request and Get Response
+        Response response = given(spec).when().get("{first}/{second}");
+        response.prettyPrint();
+        // Do assertion
+        JsonPath json = response.jsonPath();
+        assertEquals(200,response.statusCode());
+        assertEquals(expectedDataMap.get("firstname"),json.getString("firstname"));
+        assertEquals(expectedDataMap.get("lastname"),json.getString("lastname"));
+        assertEquals(expectedDataMap.get("totalprice"),json.getInt("totalprice"));
+        assertEquals(expectedDataMap.get("depositpaid"),json.getBoolean("depositpaid"));
+        assertEquals(bookingMap.get("checkin"),json.getString("bookingdates.checkin"));
+        assertEquals(bookingMap.get("checkout"),json.getString("bookingdates.checkout"));
+        assertEquals(expectedDataMap.get("additionalneeds"),json.getString("additionalneeds"));
 
-        Map<String,Object> expectedDataMap = new HerOkuAppTestData().expectedDataMapper("Jane","Doe"
-                ,111,true,bookingMap,"Extra pillows please");
-
-        // geri kalan response gönderme ve assertion yapma adımlarını yukarıdaki metoddan kopyalayabiliriz. Sonraki derste buradan başlayacağız
     }
 
 }

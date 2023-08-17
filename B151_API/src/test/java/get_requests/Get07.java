@@ -83,6 +83,12 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
 //{} icinde sarti koyunca sarta uyan tum veriler gelirken {} den sonra . koyup neyi almak
 // istiyorsak o veriyi yazarsak sadece o veriyi aliriz.
 
+//findAll{} bir tablo icinde arama yapmak icin kullaniriz. {} icine item 'in kisaltmasi olan it yazilir
+// ve hangi veriyi istiyorsak onun sartini ekleriz.
+//{} icinde sarti koyunca sarta uyan tum veriler gelirken {} den sonra . koyup neyi almak istiyorsak o
+// veriyi yazarsak sadece o veriyi aliriz.
+
+//body nin icerisine gondercegimiz veriye payLoad denir.
 
 
 
