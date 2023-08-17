@@ -36,7 +36,9 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
         spec.pathParams("first","todos"
                 ,"second",198);
 
-        // Expected data:
+        // Set Expected data:
+
+        //JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
         Map<String,Object> payLoad = new JsonPlaceHolderTestData()
                 .expectedDataMapper(null,"Wash the dishes",null);
 
@@ -57,7 +59,7 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
         assertEquals(200,response.statusCode());
         assertEquals(payLoad.get("title"),actualDataMap.get("title"));
         //body nin tamamı assert edilecekse 1. expectedDataMap isminde yeni bir map oluşturup karşılaştırma yapılır
-        //2.payload map ine respons aldıktansonra güncelleme yapar beklediğiniz verileri girersiniz
+        //2.payload map ine response aldıktansonra güncelleme yapar beklediğiniz verileri girersiniz
 
         // tüm alanların doğrulanması:
 
@@ -68,3 +70,7 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
         assertEquals(expectedDataMap.get("id"),actualDataMap.get("id"));
     }
 }
+
+// payLoad veri tabanina gonderdigimiz data
+//burda bir payload map olusturup body de sorguya bunu gonderdik.Ayri bir expectedData map olustururak da
+// bunu dogrulama isleminde kullandik.

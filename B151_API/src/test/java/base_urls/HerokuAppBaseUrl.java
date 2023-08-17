@@ -43,7 +43,9 @@ Bu metodun içerisinde kullanılabilecek metotlar:
  */
 
 //setAccept() methodu get isleminde yapilan sorguda hangi data tipinde islem yapacaksak onu belirtmek icin kullanilir
-//response da sadece body'yi degil header'i daki verileri de hem soft hem hard assertion ile test edebiliriz
+//response da sadece body'yi degil header'i daki verileri de hem soft hem hard assertion ile test edebiliriz.
+// Burda Base Url e set content type i ekledik. Post isleminde hangi veri turu ile gonderigimizi belirtmezsek
+// Internal Server Error hatasi aliriz.
 
 
 

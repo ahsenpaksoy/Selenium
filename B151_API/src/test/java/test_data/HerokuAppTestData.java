@@ -3,7 +3,7 @@ package test_data;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HerOkuAppTestData {
+public class HerokuAppTestData {
 
     public Map<String,String> bookingDateMapper(String checkin,String checkout ){
         Map<String,String> bookingDatesMap = new HashMap<>(); // ilk önce iç map oluşturulur

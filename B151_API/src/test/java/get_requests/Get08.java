@@ -78,6 +78,9 @@ public class Get08 extends JsonPlaceHolderBaseUrl {
 
  // Sadece put post ve patch de body kullaniyoruz, get de olmaz.
 
+//header, status code, time, size bilgileri response'un icerisinde mevcut. actualData ile sadece body
+// icesindeki datalari test ettik.
+
 
 
 

@@ -10,7 +10,7 @@ public class JsonPlaceHolderPojo {
     private  String title;
     private Boolean completed;
 
-        //2.Parametreli ve parmetresiz constructor oluştur
+        //2.Parametreli ve parametresiz constructor'lar oluştur
 
     public JsonPlaceHolderPojo(Integer userId, String title, Boolean completed) {
         this.userId = userId;
@@ -47,7 +47,7 @@ public class JsonPlaceHolderPojo {
         this.completed = completed;
     }
 
-        //4.toString mthd oluştur
+        //4. toString method'unu oluştur
 
     @Override
     public String toString() {

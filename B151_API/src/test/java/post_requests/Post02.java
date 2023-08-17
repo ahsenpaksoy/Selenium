@@ -4,7 +4,7 @@ import base_urls.HerokuAppBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
-import test_data.HerOkuAppTestData;
+import test_data.HerokuAppTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,8 +52,10 @@ Given
         spec.pathParam("first","booking");
 
         // Set Expected Data
-        Map<String,String> bookingMap = new HerOkuAppTestData().bookingDateMapper("2021-09-09","2021-09-21");
-        Map<String,Object> expectedDataMap = new HerOkuAppTestData().expectedDataMapper("John","Doe",11111,true,bookingMap,null);
+
+        //HerokuAppTestData obj = new HerokuAppTestData();
+        Map<String,String> bookingMap = new HerokuAppTestData().bookingDateMapper("2021-09-09","2021-09-21");
+        Map<String,Object> expectedDataMap = new HerokuAppTestData().expectedDataMapper("John","Doe",11111,true,bookingMap,null);
         System.out.println("expectedDataMap = " + expectedDataMap);
 
         // Sent the request and get the response

@@ -43,11 +43,14 @@ public class Post03Pojo extends JsonPlaceHolderBaseUrl {
         Response response =  given(spec).body(payload).when().post("{first}");
         response.prettyPrint();
 
-        // Assertion
+        // Do Assertion
         JsonPlaceHolderPojo actualDataPojo = response.as(JsonPlaceHolderPojo.class);
 
+        assertEquals(201,response.statusCode());
         assertEquals(payload.getUserId(),actualDataPojo.getUserId());
         assertEquals(payload.getCompleted(),actualDataPojo.getCompleted());
         assertEquals(payload.getTitle(),actualDataPojo.getTitle());
     }
 }
+    //pojo class variable lari private yapip getter, setter methodlariyla cagisirip degisiklik yaptigimiz class lardir.
+    //Ic ice jsonlar geliyorsa ayri ayri pojo class lar olusturmamiz gerekir
