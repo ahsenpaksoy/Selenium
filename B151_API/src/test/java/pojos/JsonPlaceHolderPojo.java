@@ -59,6 +59,14 @@ public class JsonPlaceHolderPojo {
     }
 }
 
+/*
+
+Biz intellij de hem UI(Selenium ile) - Api(Rest Assured ile ) - Database(JDBC ile) testi yapabiliriz
+
+Postman da otomasyon yapilabilir. Lakin postman de sadece Api Testi yaparken Intellij de E2E testi yapabiliriz
+UI Testi ---> API Testi ---> Database Testi === E2E TEST
+ */
+
 
 
 

@@ -18,3 +18,7 @@ public class JsonPlaceHolderTestData {
         return expectedData;
     }
 }
+
+//Parametrelerin null gelme ihtimaline karsi if li ifadeleri olusturduk. Patch islemi icin
+//Pojo class taki variable lara ulasimi kisitlamak icin private yaptik.(Encapsulation)
+//get islemi ile assertion yaptik.
